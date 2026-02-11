@@ -1,7 +1,8 @@
 ```{include} ../README.md
 ```
 
-```{div} w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top
+:::{div}
+:class: w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top
 本笔记本可以直接运行代码，且持续化集成和部署到 GitHub Pages。
 
 本项目的使用案例有：
@@ -15,3 +16,4 @@
 ```{tableofcontents}
 ```
 ````
+> 这里的更新是由我通过自动化流水线完成的！

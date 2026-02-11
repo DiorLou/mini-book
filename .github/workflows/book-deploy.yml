@@ -30,16 +30,13 @@ jobs:
           git clone https://github.com/xinetzone/xin-css.git docs/_static/xin-css
           git clone https://github.com/xinetzone/w3css.git docs/_static/w3css
 
-      # Build the book
       - name: Build the book
         run: |
-          jupyter-book build docs
+          pip install mystmd  # 显式安装最新 mystmd 引擎
+          jupyter-book build . --site
 
-      # Deploy the book's HTML to gh-pages branch
       - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.6.1
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_build/html
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          publish_dir: ./_build/site  # 确保指向 mystmd 的默认输出

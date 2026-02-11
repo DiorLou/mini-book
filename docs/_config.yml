@@ -7,9 +7,9 @@
 
 #######################################################################################
 # Book settings
-title: "" # 书的标题。将放置在左侧导航栏中。
-author: xinetzone
-copyright: "2021" # 版权年份将放置在页脚中
+title: "Study AI" # 书的标题。将放置在左侧导航栏中。
+author: Diorlou
+copyright: "2026" # 版权年份将放置在页脚中
 logo: logo.jpg # 图书徽标的路径
 
 # 制作书籍时跳过的模式。可以是 glob-style (例如 "*skip.ipynb")
@@ -86,7 +86,7 @@ html:
   comments:
     hypothesis: true
     utterances:
-      repo: "xinetzone/mini-book"
+      repo: "DiorLou/mini-book"
 
 #######################################################################################
 # LaTeX-specific settings
@@ -106,7 +106,7 @@ launch_buttons:
   colab_url: "" # The URL of Google Colab (https://colab.research.google.com)
 
 repository:
-  url: https://github.com/xinetzone/mini-book # The URL to your book's repository
+  url: https://github.com/DiorLou/mini-book # The URL to your book's repository
   path_to_book: "docs" # A path to your book's folder, relative to the repository root.
   branch: main # Which branch of the repository should be used when creating links
 
