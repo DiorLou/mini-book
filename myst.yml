@@ -22,6 +22,12 @@ project:
     
 site:
   template: book-theme
+  toc:
+    - file: intro.md          # 你的总首页
+    - title: 📈 金融投资模块   # 侧边栏大标题
+      sections:
+        - file: finance/intro.md            # 第一章：导读
+        - file: finance/finance_basics.md   # 第二章：基础知识
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
