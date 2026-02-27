@@ -1,0 +1,18 @@
+version: 1
+project:
+  toc:
+    - title: Part 0
+      file: finance/intro.md
+    - title: Part 1
+      children:
+        - title: 金融基础知识
+          file: finance/finance_basics.md
+        - title: A股股票技术分析学习指南
+          file: finance/A股股票技术分析学习指南.md
+    #   children:
+    #     - file: chapter1.md
+    #     - file: chapter2.md
+    # - title: Part 2
+    #   children:
+    #     - file: chapter3.md
+    #     - file: chapter4.md
