@@ -9,6 +9,10 @@ project:
           file: finance/finance_basics.md
         - title: A股股票技术分析学习指南
           file: finance/A股股票技术分析学习指南.md
+    - title: Part 2
+      children:
+        - title: 关于Likelihood
+          file: deep learning\Likelihood.md
     #   children:
     #     - file: chapter1.md
     #     - file: chapter2.md
