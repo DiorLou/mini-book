@@ -1,0 +1,27 @@
+version: 1
+
+project:
+  id: computer-notes
+  title: 计算机与深度学习笔记
+  description: 计算机、机器学习与深度学习知识记录
+  authors:
+    - Diorlou
+  exports:
+    - id: computer-notes-pdf
+      format: typst
+      template: plain_typst_book
+      articles:
+        - backward.md
+        - Cross-Entropy Loss.md
+        - Likelihood.md
+      output: _build/exports/computer-notes.pdf
+  downloads:
+    - id: computer-notes-pdf
+      title: 下载计算机笔记 PDF
+
+extends:
+  - toc.yml
+
+site:
+  title: 计算机与深度学习笔记
+  template: book-theme

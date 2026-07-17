@@ -122,7 +122,7 @@ print(f"两者是否相等: {torch.allclose(loss_official, loss_manual)}")
 
 # 梯度推导：Softmax 交叉熵损失对 Logits 的偏导
 
-> **核心结论：** $\frac{\partial l}{\partial o_j} = \hat{y}_j - y_j$。即：梯度 = 预测值 - 真实值。
+> **核心结论：** $\frac{∂ l}{∂ o_j} = \hat{y}_j - y_j$。即：梯度 = 预测值 - 真实值。
 
 ---
 
@@ -138,19 +138,19 @@ print(f"两者是否相等: {torch.allclose(loss_official, loss_manual)}")
 
 ## 2. 逐步求导过程
 
-我们要计算损失 $l$ 相对于某一个输入 $o_j$ 的偏导数 $\frac{\partial l}{\partial o_j}$。我们将公式拆解为左右两部分分别求导：
+我们要计算损失 $l$ 相对于某一个输入 $o_j$ 的偏导数 $\frac{∂ l}{∂ o_j}$。我们将公式拆解为左右两部分分别求导：
 
-### 第一部分：对数项求导 $\frac{\partial}{\partial o_j} \left( \log \sum_{k=1}^q \exp(o_k) \right)$
+### 第一部分：对数项求导 $\frac{∂}{∂ o_j} \left( \log \sum_{k=1}^q \exp(o_k) \right)$
 根据链式法则 $\frac{d \log(u)}{dx} = \frac{1}{u} \frac{du}{dx}$：
 1.  外层对 $\log$ 求导：$\frac{1}{\sum_{k=1}^q \exp(o_k)}$
 2.  内层对 $\sum \exp(o_k)$ 求导：由于我们要对 $o_j$ 求导，求和项中只有 $\exp(o_j)$ 含有 $o_j$，其他项求导均为 0。因此内层导数为 $\exp(o_j)$。
 3.  **合并结果：** $$\frac{\exp(o_j)}{\sum_{k=1}^q \exp(o_k)} = \hat{y}_j$$
     *(这正好就是 Softmax 的输出值！)*
 
-### 第二部分：求和项求导 $\frac{\partial}{\partial o_j} \left( \sum_{j=1}^q y_j o_j \right)$
+### 第二部分：求和项求导 $\frac{∂}{∂ o_j} \left( \sum_{j=1}^q y_j o_j \right)$
 这是一个关于 $o$ 的线性组合：
 * 在求和式 $y_1 o_1 + y_2 o_2 + \dots + y_q o_q$ 中，只有 $y_j o_j$ 这一项包含变量 $o_j$。
-* **合并结果：** $$\frac{\partial}{\partial o_j} (y_j o_j) = y_j$$
+* **合并结果：** $$\frac{∂}{∂ o_j} (y_j o_j) = y_j$$
 
 ---
 
@@ -158,7 +158,7 @@ print(f"两者是否相等: {torch.allclose(loss_official, loss_manual)}")
 
 将上述两部分相减，即可得到最终梯度公式：
 
-$$\frac{\partial l}{\partial o_j} = \hat{y}_j - y_j$$
+$$\frac{∂ l}{∂ o_j} = \hat{y}_j - y_j$$
 
 ---
 
@@ -198,7 +198,7 @@ $$\frac{\partial l}{\partial o_j} = \hat{y}_j - y_j$$
 在 PyTorch 中，当你调用 `y.backward()`（通常是 `loss.backward()`）时，系统会自动完成以下操作：
 
 1. **触发计算图**：PyTorch 会沿着正向传播时建立的**动态计算图 (Computation Graph)** 逆向遍历。
-2. **应用链式法则**：自动计算 $\frac{\partial \text{loss}}{\partial w}$ 等所有偏导数。
+2. **应用链式法则**：自动计算 $\frac{∂ \text{loss}}{∂ w}$ 等所有偏导数。
 3. **梯度填充**：将计算出的梯度数值存放到每个对应参数（Tensor）的 `.grad` 属性中。
 
 > **注意**：默认情况下，`backward()` 会**累加**梯度。这就是为什么在每个 Batch 训练前需要调用 `optimizer.zero_grad()` 的原因。
@@ -238,9 +238,9 @@ $$\frac{\partial l}{\partial o_j} = \hat{y}_j - y_j$$
 假设我们有一个极简的网络：输入 $x \rightarrow$ 线性层 $u = wx \rightarrow$ 激活函数 $y = \sigma(u) \rightarrow$ 损失计算 $L = (y - t)^2$。
 
 在反向传播时，我们从 $L$ 开始，逆向计算偏导数：
-1. **最后一层**：计算 $\frac{\partial L}{\partial y}$。
-2. **倒数第二层**：根据链式法则，$\frac{\partial L}{\partial u} = \frac{\partial L}{\partial y} \cdot \frac{\partial y}{\partial u}$。
-3. **参数层**：最终得到 $\frac{\partial L}{\partial w} = \frac{\partial L}{\partial u} \cdot \frac{\partial u}{\partial w}$。
+1. **最后一层**：计算 $\frac{∂ L}{∂ y}$。
+2. **倒数第二层**：根据链式法则，$\frac{∂ L}{∂ u} = \frac{∂ L}{∂ y} \cdot \frac{∂ y}{∂ u}$。
+3. **参数层**：最终得到 $\frac{∂ L}{∂ w} = \frac{∂ L}{∂ u} \cdot \frac{∂ u}{∂ w}$。
 
 
 
@@ -254,7 +254,7 @@ $$\frac{\partial l}{\partial o_j} = \hat{y}_j - y_j$$
 PyTorch 在正向传播时动态构建了一张**有向无环图 (Directed Acyclic Graph)**。图中每个节点是一个张量，每条边代表一次运算（如 `mul`, `add`, `exp`）。
 
 ### 🔹 B. 局部梯度计算
-每个节点（算子）都预定义了自己的导数公式。例如，如果是乘法节点 $z = a \cdot b$，它知道 $\frac{\partial z}{\partial a} = b$。
+每个节点（算子）都预定义了自己的导数公式。例如，如果是乘法节点 $z = a \cdot b$，它知道 $\frac{∂ z}{∂ a} = b$。
 
 ### 🔹 C. 梯度填充与累加 (x.grad)
 这是最容易被忽视的一点：

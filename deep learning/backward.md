@@ -10,12 +10,12 @@
 
 ### 🔹 l.sum().backward()
 * **公式**：$L_{sum} = \sum_{i=1}^{n} l_i$
-* **梯度**：$\frac{\partial L_{sum}}{\partial w} = \sum_{i=1}^{n} \frac{\partial l_i}{\partial w}$
+* **梯度**：$\frac{∂ L_{sum}}{∂ w} = \sum_{i=1}^{n} \frac{∂ l_i}{∂ w}$
 * **表现**：如果有 100 个样本，梯度就是 100 个样本梯度的总和。**Batch 越大，梯度数值越大。**
 
 ### 🔹 l.mean().backward()
 * **公式**：$L_{mean} = \frac{1}{n} \sum_{i=1}^{n} l_i$
-* **梯度**：$\frac{\partial L_{mean}}{\partial w} = \frac{1}{n} \sum_{i=1}^{n} \frac{\partial l_i}{\partial w}$
+* **梯度**：$\frac{∂ L_{mean}}{∂ w} = \frac{1}{n} \sum_{i=1}^{n} \frac{∂ l_i}{∂ w}$
 * **表现**：梯度被平均到了每一个样本上。**无论 Batch 是 32 还是 1024，梯度的量级基本保持稳定。**
 
 ---

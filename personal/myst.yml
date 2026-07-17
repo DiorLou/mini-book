@@ -1,0 +1,24 @@
+version: 1
+
+project:
+  id: personal-resume
+  title: 个人介绍
+  description: 个人相亲简历
+  authors:
+    - Diorlou
+  exports:
+    - id: personal-resume-pdf
+      format: typst
+      template: plain_typst_book
+      article: cv.md
+      output: _build/exports/personal-resume.pdf
+  downloads:
+    - id: personal-resume-pdf
+      title: 下载个人介绍 PDF
+
+extends:
+  - toc.yml
+
+site:
+  title: 个人介绍
+  template: book-theme

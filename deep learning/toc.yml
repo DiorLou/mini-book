@@ -1,0 +1,9 @@
+version: 1
+project:
+  toc:
+    - title: 反向传播
+      file: backward.md
+    - title: 交叉熵损失
+      file: Cross-Entropy Loss.md
+    - title: 概率与似然
+      file: Likelihood.md

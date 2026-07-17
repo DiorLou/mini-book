@@ -1,0 +1,24 @@
+version: 1
+
+project:
+  id: general-notes
+  title: 通用笔记
+  description: 日常知识、阅读与思考记录
+  authors:
+    - Diorlou
+  exports:
+    - id: general-notes-pdf
+      format: typst
+      template: plain_typst_book
+      article: intro.md
+      output: _build/exports/general-notes.pdf
+  downloads:
+    - id: general-notes-pdf
+      title: 下载通用笔记 PDF
+
+extends:
+  - toc.yml
+
+site:
+  title: 通用笔记
+  template: book-theme

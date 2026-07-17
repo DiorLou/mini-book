@@ -23,22 +23,20 @@
  ## 王道
 
 ```{figure} ./nanyadao.jpg
----
-width: 400px
-align: center
-name: 南丫岛徒步
-figclass: align-center
+:width: 400px
+:align: center
+:name: nanyadao
+:class: align-center
+
 南丫岛徒步
----
 ```
 
 
 ```{figure} ./unnamed.jpg
----
-width: 400px
-align: center
-name: 漫展合影
-figclass: align-center
+:width: 400px
+:align: center
+:name: comic-con-photo
+:class: align-center
+
 漫展合影
----
 ```

@@ -1,0 +1,8 @@
+version: 1
+project:
+  toc:
+    - file: intro.md
+    - title: 金融基础知识
+      file: finance_basics.md
+    - title: A 股股票技术分析
+      file: A股股票技术分析学习指南.md
