@@ -4,7 +4,6 @@
 
 | 内容 | 源目录 | 网页路径 | PDF |
 | --- | --- | --- | --- |
-| 通用笔记 | `notes/` | `/notes/` | `general-notes.pdf` |
 | 计算机与深度学习 | `deep learning/` | `/computer/` | `computer-notes.pdf` |
 | 金融投资 | `finance/` | `/finance/` | `finance-notes.pdf` |
 | 个人相亲简历 | `personal/` | `/resume/` | `personal-resume.pdf` |

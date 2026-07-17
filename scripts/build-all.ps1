@@ -5,7 +5,6 @@ param(
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $Projects = @(
-    @{ Path = "notes"; Slug = "notes"; Pdf = "general-notes.pdf" },
     @{ Path = "deep learning"; Slug = "computer"; Pdf = "computer-notes.pdf" },
     @{ Path = "finance"; Slug = "finance"; Pdf = "finance-notes.pdf" },
     @{ Path = "personal"; Slug = "resume"; Pdf = "personal-resume.pdf" }
