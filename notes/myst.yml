@@ -10,6 +10,7 @@ project:
     - id: general-notes-pdf
       format: typst
       template: plain_typst_book
+      fontstyle: Noto Serif CJK SC
       article: intro.md
       output: _build/exports/general-notes.pdf
   downloads:

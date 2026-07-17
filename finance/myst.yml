@@ -10,6 +10,7 @@ project:
     - id: finance-notes-pdf
       format: typst
       template: plain_typst_book
+      fontstyle: Noto Serif CJK SC
       articles:
         - intro.md
         - finance_basics.md

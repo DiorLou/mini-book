@@ -10,6 +10,7 @@ project:
     - id: computer-notes-pdf
       format: typst
       template: plain_typst_book
+      fontstyle: Noto Serif CJK SC
       articles:
         - backward.md
         - Cross-Entropy Loss.md
