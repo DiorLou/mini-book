@@ -33,6 +33,12 @@ myst build --typst
 myst build --html
 ```
 
+增量构建发生变化的书籍、启动本地服务器并打开浏览器：
+
+```powershell
+./scripts/preview.cmd
+```
+
 ## 发布
 
 推送到 `main` 分支后，GitHub Actions 会构建四个项目，生成首页并部署到 GitHub Pages。
