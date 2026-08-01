@@ -23,6 +23,9 @@ npm install -g mystmd
 personal/_build/exports/personal-resume.pdf
 ```
 
+PDF 构建使用仓库 `assets/fonts/` 中附带的静态 Noto Sans SC 字体，
+无需在本机额外安装中文字体。
+
 只构建一本时，进入它的目录并执行：
 
 ```powershell

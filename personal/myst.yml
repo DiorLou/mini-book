@@ -10,7 +10,7 @@ project:
     - id: personal-resume-pdf
       format: typst
       template: plain_typst_book
-      fontstyle: Noto Serif CJK SC
+      fontstyle: Noto Sans SC
       article: cv.md
       output: _build/exports/personal-resume.pdf
   downloads:

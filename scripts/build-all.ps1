@@ -11,10 +11,15 @@ $Projects = @(
 )
 
 $PreviousNodeOptions = [Environment]::GetEnvironmentVariable("NODE_OPTIONS", "Process")
+$PreviousTypstFontPaths = [Environment]::GetEnvironmentVariable("TYPST_FONT_PATHS", "Process")
 $DeprecationFilter = "--disable-warning=DEP0169"
 if ($PreviousNodeOptions -notlike "*$DeprecationFilter*") {
     $env:NODE_OPTIONS = (($PreviousNodeOptions, $DeprecationFilter) -join " ").Trim()
 }
+
+# Use repository-owned static fonts so PDF output is reproducible on Windows,
+# other development machines, and GitHub Actions runners.
+$env:TYPST_FONT_PATHS = Join-Path $RepoRoot "assets/fonts"
 
 try {
     foreach ($Project in $Projects) {
@@ -61,4 +66,5 @@ try {
 }
 finally {
     [Environment]::SetEnvironmentVariable("NODE_OPTIONS", $PreviousNodeOptions, "Process")
+    [Environment]::SetEnvironmentVariable("TYPST_FONT_PATHS", $PreviousTypstFontPaths, "Process")
 }
