@@ -26,3 +26,5 @@ extends:
 site:
   title: 金融投资笔记
   template: book-theme
+  options:
+    favicon: favicon.svg

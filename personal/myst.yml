@@ -23,3 +23,5 @@ extends:
 site:
   title: 个人介绍
   template: book-theme
+  options:
+    favicon: favicon.svg

@@ -26,3 +26,5 @@ extends:
 site:
   title: 计算机与深度学习笔记
   template: book-theme
+  options:
+    favicon: favicon.svg
