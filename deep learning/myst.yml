@@ -12,9 +12,15 @@ project:
       template: plain_typst_book
       fontstyle: Noto Sans SC
       articles:
-        - backward.md
-        - Cross-Entropy Loss.md
-        - Likelihood.md
+        - intro.md
+        - probability-likelihood.md
+        - cross-entropy.md
+        - pytorch-cross-entropy.md
+        - softmax-cross-entropy-gradient.md
+        - forward-backward.md
+        - autograd.md
+        - vector-backward.md
+        - loss-reduction.md
       output: _build/exports/computer-notes.pdf
   downloads:
     - id: computer-notes-pdf

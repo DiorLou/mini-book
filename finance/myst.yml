@@ -13,8 +13,13 @@ project:
       fontstyle: Noto Sans SC
       articles:
         - intro.md
-        - finance_basics.md
-        - A股股票技术分析学习指南.md
+        - market-institutions.md
+        - fund-products.md
+        - trading-venues.md
+        - futures.md
+        - call-auction.md
+        - roe.md
+        - technical-analysis-guide.md
       output: _build/exports/finance-notes.pdf
   downloads:
     - id: finance-notes-pdf
