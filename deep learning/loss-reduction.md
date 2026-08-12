@@ -13,8 +13,8 @@
 $$
 L_{sum}=\sum_{i=1}^{n}l_i,
 \qquad
-\frac{\partial L_{sum}}{\partial w}
-=\sum_{i=1}^{n}\frac{\partial l_i}{\partial w}
+\nabla_w L_{sum}
+=\sum_{i=1}^{n}\nabla_w l_i
 $$
 
 平均归约：
@@ -22,8 +22,8 @@ $$
 $$
 L_{mean}=\frac{1}{n}\sum_{i=1}^{n}l_i,
 \qquad
-\frac{\partial L_{mean}}{\partial w}
-=\frac{1}{n}\sum_{i=1}^{n}\frac{\partial l_i}{\partial w}
+\nabla_w L_{mean}
+=\frac{1}{n}\sum_{i=1}^{n}\nabla_w l_i
 $$
 
 因此，在样本梯度分布相近时，`sum` 的梯度规模会随批量大小近似增长，而 `mean` 保持在相近量级。

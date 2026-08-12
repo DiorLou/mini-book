@@ -17,14 +17,14 @@ print(x.grad)
 
 ## 标量输出：默认反向种子为 1
 
-当 $L$ 是标量时，`L.backward()` 隐式使用 $\partial L/\partial L=1$ 作为反向传播起点，因此不需要额外参数。
+当 $L$ 是标量时，`L.backward()` 隐式使用 $\nabla_L L=1$ 作为反向传播起点，因此不需要额外参数。
 
 ## 向量输出：完整导数是雅可比矩阵
 
 若 $\mathbf y=f(\mathbf x)$，其完整导数是**雅可比矩阵（Jacobian Matrix）**：
 
 $$
-J_{ij}=\frac{\partial y_i}{\partial x_j}
+J_{ij}=\nabla_{x_j}y_i
 $$
 
 PyTorch 的反向模式自动微分不会默认构造整张雅可比矩阵，而是高效计算一个**向量—雅可比积（Vector–Jacobian Product, VJP）**。
@@ -37,7 +37,7 @@ $$
 L=\sum_i y_i
 $$
 
-再计算 $\partial L/\partial\mathbf x$。
+再计算 $\nabla_{\mathbf x}L$。
 
 ## 回到原问题
 

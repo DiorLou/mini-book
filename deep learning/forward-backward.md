@@ -29,10 +29,10 @@ $$
 则参数梯度为：
 
 $$
-\frac{\partial L}{\partial w}
-=\frac{\partial L}{\partial y}
-\frac{\partial y}{\partial u}
-\frac{\partial u}{\partial w}
+\nabla_w L
+=\nabla_y L
+\cdot\nabla_u y
+\cdot\nabla_w u
 $$
 
 这就是**链式法则（Chain Rule）**在计算图上的高效复用。
@@ -42,7 +42,7 @@ $$
 `loss.backward()` 只负责把梯度写入参数的 `.grad`；`optimizer.step()` 才根据优化规则修改参数。以最简单的梯度下降为例：
 
 $$
-w\leftarrow w-\eta\frac{\partial L}{\partial w}
+w\leftarrow w-\eta\nabla_w L
 $$
 
 ## 回到原问题

@@ -23,7 +23,7 @@ $$
 第一项对 $o_j$ 求导：
 
 $$
-\frac{\partial}{\partial o_j}\log\sum_k e^{o_k}
+\nabla_{o_j}\log\sum_k e^{o_k}
 =\frac{e^{o_j}}{\sum_k e^{o_k}}
 =\hat y_j
 $$
@@ -31,7 +31,7 @@ $$
 第二项是线性组合，对 $o_j$ 求导得到 $y_j$。因此：
 
 $$
-\frac{\partial l}{\partial o_j}=\hat y_j-y_j
+\nabla_{o_j}l=\hat y_j-y_j
 $$
 
 ## 一个具体例子
