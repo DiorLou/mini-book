@@ -1,6 +1,6 @@
 ---
 name: organize-minibook-notes
-description: Organize Codex conversations, supplied material, or a YouTube video with accessible captions into clear Chinese MyST Markdown notes in the mini-book repository. Use when the user asks to 整理、记录、沉淀、归档或写入笔记，提供带字幕的 YouTube 链接要求总结，或指定新建/已有的书籍、大章节、小章节来保存知识。 If a YouTube transcript is unavailable, report that limitation instead of creating a note from metadata alone.
+description: Organize the user's Codex questions, Codex answers, supplied code, errors, and other background into clear Chinese MyST Markdown notes in the mini-book repository. Use when the user asks to 整理、记录、沉淀、归档或写入当前/历史问答笔记，或指定新建/已有的书籍、大章节、小章节来保存知识。
 ---
 
 # 整理 Mini Book 笔记
@@ -12,7 +12,6 @@ description: Organize Codex conversations, supplied material, or a YouTube video
 ### 1. 收集有效上下文
 
 - 读取当前任务中与目标疑问有关的用户提问、Codex 回答、代码、报错、命令输出、截图说明和后续澄清。
-- 用户提供 YouTube 链接并要求整理视频时，先读取 [references/youtube-captions.md](references/youtube-captions.md)，只有获得可访问且足够完整的字幕或公开文字稿后才继续。
 - 优先采用用户提供的事实；不得臆造未出现的运行环境、代码行为或结论。
 - 若 Codex 原回答存在明显错误或已被后续信息推翻，以修正后的知识写入笔记，并简短标明容易产生的误解。
 - 省略寒暄、工具操作流水、无关讨论和仅对本次执行有意义的信息。
@@ -69,4 +68,3 @@ description: Organize Codex conversations, supplied material, or a YouTube video
 - “新建一本《Python 调试》，在新大章节‘运行时错误’下建立小章节‘作用域’，整理当前对话。”
 - “放到 finance 这本已有书里，大章节沿用‘金融基础’，小章节新建‘复利’。”
 - “整理成笔记，位置你判断。”
-- “把这个有字幕的 YouTube 视频整理到《深度学习》的反向传播章节。”
