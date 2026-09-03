@@ -34,7 +34,16 @@ function Get-ProjectFingerprint {
 
     $FingerprintSource = foreach ($File in $InputFiles) {
         $RelativePath = $File.FullName.Substring($RepoRoot.Length).TrimStart("\", "/").Replace("\", "/")
-        "$RelativePath`n$((Get-FileHash -LiteralPath $File.FullName -Algorithm SHA256).Hash)"
+        $Stream = [IO.File]::OpenRead($File.FullName)
+        $FileHasher = [Security.Cryptography.SHA256]::Create()
+        try {
+            $FileHash = ([BitConverter]::ToString($FileHasher.ComputeHash($Stream))).Replace("-", "")
+        }
+        finally {
+            $FileHasher.Dispose()
+            $Stream.Dispose()
+        }
+        "$RelativePath`n$FileHash"
     }
 
     $Bytes = [Text.Encoding]::UTF8.GetBytes(($FingerprintSource -join "`n"))
