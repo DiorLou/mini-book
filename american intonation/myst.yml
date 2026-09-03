@@ -1,0 +1,27 @@
+version: 1
+
+project:
+  id: american-intonation
+  title: American intonation
+  description: 美式英语语调、重音、旋律与节奏学习笔记
+  authors:
+    - Diorlou
+  exports:
+    - id: american-intonation-pdf
+      format: typst
+      template: plain_typst_book
+      fontstyle: Noto Sans SC
+      articles:
+        - intro.md
+        - stress-melody-rhythm.md
+      output: _build/exports/american-intonation.pdf
+  downloads:
+    - id: american-intonation-pdf
+      title: 下载 American intonation PDF
+
+extends:
+  - toc.yml
+
+site:
+  title: American intonation
+  template: book-theme
