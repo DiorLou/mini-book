@@ -6,6 +6,10 @@ project:
       children:
         - title: 英语语调的三要素
           file: stress-melody-rhythm.md
+    - title: Phrasing and Connected Speech
+      children:
+        - title: 用意群、停顿和重音组织自然表达
+          file: phrasing-connected-speech.md
     - title: 发音基础
       children:
         - title: 先定位，再发声：英语发音的口型与舌位训练
