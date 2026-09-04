@@ -14,6 +14,7 @@ project:
       articles:
         - intro.md
         - stress-melody-rhythm.md
+        - position-before-sound.md
       output: _build/exports/american-intonation.pdf
   downloads:
     - id: american-intonation-pdf
