@@ -10,6 +10,8 @@ project:
       children:
         - title: 用意群、停顿和重音组织自然表达
           file: phrasing-connected-speech.md
+        - title: "Connected Speech: Vowel-to-Consonant, Consonant-to-Consonant, Consonant-to-Vowel, and Vowel-to-Vowel Linking"
+          file: connected-speech-linking-patterns.md
     - title: 发音基础
       children:
         - title: 先定位，再发声：英语发音的口型与舌位训练

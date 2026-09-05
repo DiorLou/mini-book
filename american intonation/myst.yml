@@ -15,6 +15,7 @@ project:
         - intro.md
         - stress-melody-rhythm.md
         - phrasing-connected-speech.md
+        - connected-speech-linking-patterns.md
         - position-before-sound.md
       output: _build/exports/american-intonation.pdf
   downloads:
