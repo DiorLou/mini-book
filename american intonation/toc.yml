@@ -12,6 +12,8 @@ project:
           file: phrasing-connected-speech.md
         - title: "Connected Speech: Vowel-to-Consonant, Consonant-to-Consonant, Consonant-to-Vowel, and Vowel-to-Vowel Linking"
           file: connected-speech-linking-patterns.md
+        - title: Contractions：弱化元音、保留辅音的英语缩略形式
+          file: contractions-vowels-consonants.md
     - title: 发音基础
       children:
         - title: 先定位，再发声：英语发音的口型与舌位训练
