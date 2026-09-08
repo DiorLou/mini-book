@@ -7,6 +7,7 @@
 | 计算机与深度学习 | `deep learning/` | `/computer/` | `computer-notes.pdf` |
 | 金融投资 | `finance/` | `/finance/` | `finance-notes.pdf` |
 | American intonation | `american intonation/` | `/american-intonation/` | `american-intonation.pdf` |
+| 记单词 | `vocabulary/` | `/vocabulary/` | `vocabulary-notes.pdf` |
 | 个人相亲简历 | `personal/` | `/resume/` | `personal-resume.pdf` |
 
 ## 本地构建
@@ -42,6 +43,6 @@ myst build --html
 
 ## 发布
 
-推送到 `main` 分支后，GitHub Actions 会构建四本书籍，生成首页并部署到 GitHub Pages。
+推送到 `main` 分支后，GitHub Actions 会构建五本书籍，生成首页并部署到 GitHub Pages。
 
 > `personal/cv.md` 和其中的照片会随网站公开发布。若仓库或 Pages 是公开的，请不要写入不希望公开的电话、住址、证件号码等信息。

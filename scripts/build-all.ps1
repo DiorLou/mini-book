@@ -16,6 +16,7 @@ $Projects = @(
     @{ Path = "deep learning"; Slug = "computer"; Pdf = "computer-notes.pdf" },
     @{ Path = "finance"; Slug = "finance"; Pdf = "finance-notes.pdf" },
     @{ Path = "american intonation"; Slug = "american-intonation"; Pdf = "american-intonation.pdf" },
+    @{ Path = "vocabulary"; Slug = "vocabulary"; Pdf = "vocabulary-notes.pdf" },
     @{ Path = "personal"; Slug = "resume"; Pdf = "personal-resume.pdf" }
 )
 
