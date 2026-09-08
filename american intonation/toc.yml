@@ -20,3 +20,5 @@ project:
       children:
         - title: 先定位，再发声：英语发音的口型与舌位训练
           file: position-before-sound.md
+        - title: 后缀如何决定长单词的重音
+          file: suffixes-word-stress.md
