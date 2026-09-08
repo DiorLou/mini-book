@@ -14,6 +14,8 @@ project:
           file: connected-speech-linking-patterns.md
         - title: Contractions：弱化元音、保留辅音的英语缩略形式
           file: contractions-vowels-consonants.md
+        - title: "功能词的弱读与清浊同化：and / or / for / of 和 have to 系列"
+          file: function-words-reduction-devoicing.md
     - title: 发音基础
       children:
         - title: 先定位，再发声：英语发音的口型与舌位训练
