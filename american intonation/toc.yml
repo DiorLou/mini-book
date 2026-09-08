@@ -6,6 +6,8 @@ project:
       children:
         - title: 英语语调的三要素
           file: stress-melody-rhythm.md
+        - title: 句尾升降如何区分陈述、一般疑问句与特殊疑问句
+          file: question-final-intonation.md
     - title: Phrasing and Connected Speech
       children:
         - title: 用意群、停顿和重音组织自然表达
